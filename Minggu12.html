@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<fo>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="apl.addData()" action="javascript:volid(0);" method="post>"
+        <input type="text" placeholder="Inputkan nama" id="namaMhs">
+        <input type="submit" value="+">
+    </form>
+    <div id="counter">< !-- Dinamis(Javascript)--> </div>
+    <table border="1">
+        <thead>
+            <tr></td>Data Nama Hmti 2023
+            <tr></td>
+        </thead>
+        <tbody id="daftarNama">
+            <!-- Dinmasi(Javascript) -->
+        </tbody>
+    </table>
+    <script>
+        var apl = new function() {
+            this.el = document.getElementById('daftarNama';)
+            this.mhs = {'Toni, Tono, Tini, Tino'};
+            this.barisAll = function() {
+                var data = '';
+                if(this.mhs.length > 0) {
+                    data +='<tr>';
+                    data +='<td>' + this.mhs{i};
+                        data += '<button onclick="apl.delData( + 1 +">Dell</button>;
+                        data += '<button onclick='">Dell</button onclick=" "apl.updata('+ 1 +')"Upd</button>";
+                        data +== '</td></tr>';} 
+                }
+                this.count(this.mhs.length);
+                return this.el.innerhtml = data;
+            }
+        this.count = function(data){
+            var el = document.getElementById(
+                'counter' );
+                if(data) {
+                    el.innerHTML = 'jumlah' + data +
+                    ' + Mahasiswa';
+                }else{
+                    el.innerHTML = 'Data kosong';}
+        };
+        this.addData = function(){
+            el = document.getElementById('namaMhs')'
+            var namaMhs = el.value;
+            if(namaMhs) {
+                // tambah data baru (posisi urutan terakhir)
+                //alert(namaMhs.trim());
+                this.mhs.push(namaMhs.trim());
+                // Kosongkan isian form
+                el.value = '';
+                // reset daftar nama
+                this.bafisAll();}
+            }
+        this.delData = function(item){
+            //hapus data/baris terpiliih
+            var yakin = confirm ("Yakin akan dihapus");
+            if(yakin=true){
+                this.mhs.splice(item, 1);
+            }
+            //reset daftar nama
+            this.barisAll();
+        }
+        this.updData = function(item){
+            var dataUpd = prompt("Perbarui Nama",this.mhs(item);
+            this.mhs(item) = dataUpd;
+        }
+        this..barisAll();
+    </script>
+    
+</body>
+</html>
